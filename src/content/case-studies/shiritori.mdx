@@ -1,0 +1,59 @@
+export const meta = {
+  timeline: '2025',
+}
+
+## Problem
+
+Shiritori (しりとり) is the word-chain game every Japanese kid knows. Say a word, and the next word must start with the last kana of yours. End on ん and you lose.
+
+It's also a great vocabulary drill for learners. But most digital versions are built for native speakers: they assume a Japanese keyboard, give no help when you're stuck, and punish mistakes harshly.
+
+## Users
+
+- **Japanese learners** who know a few hundred words and want to use them.
+- **People without a Japanese IME**, typing on a normal keyboard or a phone.
+
+## Constraints
+
+- **The rules are subtle.** Small kana (しゃ → や), long vowels (コーヒー), voiced variants (は / ば / ぱ), and katakana all need rules that feel fair.
+- **Input is messy.** Romaji, katakana, full-width characters, trailing spaces.
+- **Free to run.** A static web app, no servers to babysit.
+
+## Key decisions and trade-offs
+
+<Tradeoff
+  chose="Accept romaji and katakana and normalize everything to hiragana"
+  over="Requiring a Japanese keyboard"
+  because="Learners shouldn't lose a round to their keyboard. Normalizing input made the game playable on any device."
+/>
+
+<Tradeoff
+  chose="Lenient matching of voiced / unvoiced kana"
+  over="Strict native-speaker rules"
+  because="Beginners get stuck on dakuten edge cases. A slightly friendlier rule keeps the game about vocabulary, not technicalities."
+/>
+
+## What I built
+
+- **Game logic**: turn validation, used-word tracking, ん detection, and the computer's replies.
+- **Word verification system**: every word is checked against JLPT vocabulary from an online API, so only real words count.
+- **UI**: a fast, friendly single screen with clear feedback on every move.
+
+<Callout title="Try it">
+[Play here](https://shiritori-game-five.vercel.app). There's also a mini version hidden on this site: type **shiritori** anywhere.
+</Callout>
+
+<Figure src="media/photos/shiritori-cover.jpg" alt="Shiritori game screen" caption="The live game: a JLPT word, its reading and meaning, and the running chain." />
+
+## Results
+
+<Stats>
+  <Stat value="400+" label="players" />
+  <Stat value="10" label="GitHub stars" />
+</Stats>
+
+## What I'd do next
+
+- **Hints from a learner's own deck.** Connect it to Anki so the words you're studying show up in the game.
+- **Difficulty levels by JLPT band.**
+- **Multiplayer rounds** for classrooms. My students at Kuroishino would be a great first test group.

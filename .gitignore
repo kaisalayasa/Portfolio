@@ -1,0 +1,32 @@
+# Dependencies and build output (recreated by npm ci / npm run build)
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+src/generated/
+public/media/_opt/
+
+# Secrets (this site uses none; never commit one)
+.env
+.env.*
+*.local
+*.pem
+
+# Full-size and unedited originals of media (not deployed)
+media-originals/
+
+# Private notes for Claude Code
+CLAUDE.md
+.claude/
+
+# Logs, reports, OS and editor files
+*.log
+*.stackdump
+coverage/
+lighthouse-*.html
+lighthouse-*.json
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,226 @@
+{
+  "nav": {
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "languages": "Languages",
+    "life": "Life",
+    "music": "Music",
+    "activities": "Activities",
+    "contact": "Contact",
+    "resume": "Résumé",
+    "menu": "Menu",
+    "close": "Close menu",
+    "skip": "Skip to content",
+    "palette": "Search or jump to…",
+    "theme": "Toggle dark / paper mode",
+    "langLabel": "Switch language to Japanese",
+    "soundOn": "Turn UI sounds on",
+    "soundOff": "Turn UI sounds off",
+    "primary": "Primary"
+  },
+  "hero": {
+    "status": "Now in {city}",
+    "cta": "See my projects",
+    "resume": "Résumé",
+    "scroll": "Scroll",
+    "portraitAlt": "Portrait of Qais Alayasa"
+  },
+  "now": {
+    "time": "Local time in {city}",
+    "weather": "Weather in {city}"
+  },
+  "process": {
+    "kicker": "How I build",
+    "title": "Six steps, every time.",
+    "s1": "Find the friction",
+    "s1d": "Start from a real annoyance, mine or someone else’s.",
+    "s2": "Tighten the problem",
+    "s2d": "Narrow it down until I’m sure we’re actually solving the pain point.",
+    "s3": "Prototype fast",
+    "s3d": "Working software beats slides. Hours, not weeks.",
+    "s4": "Put it in front of people",
+    "s4d": "Real users, real decks, real classrooms. Watch what they do, not just what they say.",
+    "s5": "Learn honestly",
+    "s5d": "Numbers and feedback over ego. Learn from mistakes.",
+    "s6": "Iterate",
+    "s6d": "Then do it again, a little sharper each round."
+  },
+  "experience": {
+    "kicker": "Experience",
+    "title": "Where I’ve *worked*.",
+    "now": "Now"
+  },
+  "education": {
+    "kicker": "Education",
+    "title": "Where I’m *learning*.",
+    "gpa": "GPA",
+    "coursework": "Coursework",
+    "now": "Now"
+  },
+  "work": {
+    "kicker": "Projects",
+    "title": "Things I’ve *built* and shipped.",
+    "intro": "Products, tools, and experiments. The common thread: find a real friction, build the simplest thing that removes it.",
+    "live": "Live",
+    "code": "Code",
+    "case": "Case study",
+    "featured": "Featured",
+    "stars": "{n} stars",
+    "demoFront": "Front",
+    "demoBack": "Back",
+    "demoOriginal": "Original",
+    "demoRebuilt": "Rebuilt",
+    "demoCaption": "Templates, fields, and card HTML are rebuilt for the new direction.",
+    "playSite": "Play it on the live site",
+    "inDev": "New product currently in *development*.",
+    "inDevSub": "Something new is in the works. Follow along on GitHub.",
+    "followGitHub": "Follow on GitHub",
+    "more": "More work",
+    "confidentialTag": "Confidential"
+  },
+  "journey": {
+    "kicker": "My journey",
+    "title": "Palestine → Indiana → Minnesota → Tokyo → Morioka.",
+    "intro": "My journey through the world so far: the places I’ve lived, studied, and worked.",
+    "hint": "Drag to spin · Select a stop",
+    "stops": "Stops"
+  },
+  "languages": {
+    "kicker": "Languages",
+    "title": "There was no Japanese school in Palestine, so I *built* my own.",
+    "arcTitle": "Desk → office → classroom",
+    "built": "Then I built software to improve the learning process itself.",
+    "builtCta": "See Language Switch",
+    "builtTitle": "Built from this",
+    "message": "No shortcuts: a little every day, for years.",
+    "selfStudy": "years of self-study",
+    "perDay": "new words a day at peak",
+    "reviews": "reviews every day",
+    "senseiLabel": "Qais-sensei stamp",
+    "duoTitle": "Duolingo",
+    "ankiTitle": "Anki",
+    "cards": "cards",
+    "totalReviews": "total reviews",
+    "decks": "Decks",
+    "daily": "reviews per day",
+    "heatTitle": "A year of Anki reviews",
+    "heatTotal": "{n} reviews in the last year",
+    "less": "Less",
+    "more": "More",
+    "kanjiTitle": "Every kanji I know",
+    "kanjiZoom": "Open full-size viewer",
+    "kanjiHint": "Scroll or pinch to zoom · drag to pan",
+    "senseiTitle": "Qais-sensei",
+    "kanjiUnit": "kanji known"
+  },
+  "life": {
+    "kicker": "Life",
+    "title": "Snapshots with the *people* around me.",
+    "photo": "Photo",
+    "close": "Close",
+    "next": "Next",
+    "prev": "Previous",
+    "open": "Open photo: {caption}"
+  },
+  "music": {
+    "kicker": "Music",
+    "title": "Off the keyboard, *on stage*.",
+    "featured": "Featured performance",
+    "more": "More performances",
+    "band": "Favorite band",
+    "spotify": "Spotify player for {name}"
+  },
+  "activities": {
+    "kicker": "Extracurriculars",
+    "title": "Outside the *classroom*.",
+    "intro": "Leadership, community, and clubs: what I do when I’m not studying or building."
+  },
+  "recommendations": {
+    "kicker": "Recommendations",
+    "title": "What people I’ve worked with *say*.",
+    "more": "Read the full recommendation",
+    "less": "Show less",
+    "source": "Recommendations from LinkedIn, quoted word for word."
+  },
+  "resume": {
+    "kicker": "Résumé",
+    "title": "The one-page *version*.",
+    "download": "Download PDF",
+    "open": "Open in new tab",
+    "updated": "Last updated {date}",
+    "glance": "At a glance",
+    "leadership": "Leadership & activities",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Top skills",
+    "languages": "Languages",
+    "preview": "Résumé preview",
+    "noPdf": "PDF coming soon. The summary on the right is always current."
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Building something *people* actually use? Let’s talk.",
+    "email": "Email me",
+    "copy": "Copy email",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "built": "Built with React, Vite & too much Anki.",
+    "source": "View source",
+    "visitors": "{n} visitors",
+    "top": "Back to top"
+  },
+  "palette": {
+    "placeholder": "Type a command or search…",
+    "empty": "No results. Try “shiritori”.",
+    "sections": "Jump to",
+    "projects": "Projects",
+    "actions": "Actions",
+    "theme": "Toggle theme",
+    "lang": "日本語に切り替え",
+    "copyEmail": "Copy email",
+    "resume": "Open résumé",
+    "shiritori": "Play Shiritori",
+    "github": "Open GitHub",
+    "linkedin": "Open LinkedIn",
+    "sound": "Toggle UI sounds"
+  },
+  "shiritori": {
+    "title": "Mini Shiritori",
+    "rules": "Say a word that starts with the last kana of my word. Words ending in ん lose. Hiragana or romaji both work.",
+    "placeholder": "e.g. りんご or ringo",
+    "inputLabel": "Your word",
+    "submit": "Play",
+    "yourTurn": "Your turn: start with 「{kana}」",
+    "score": "Score {n}",
+    "best": "Best {n}",
+    "mustStart": "Needs to start with 「{kana}」",
+    "used": "「{word}」 was already used",
+    "tooShort": "Two kana or more, please",
+    "notKana": "Hiragana, katakana, or romaji only",
+    "youN": "「{word}」 ends in ん, so you lose! 😅",
+    "iLose": "I can’t think of anything starting with 「{kana}」. You win! 🎉",
+    "again": "Play again",
+    "full": "Play the full game",
+    "close": "Close"
+  },
+  "notFound": {
+    "title": "迷子になりました",
+    "sub": "I got lost. This page doesn’t exist, but the game does:",
+    "home": "Take me home"
+  },
+  "case": {
+    "toc": "On this page",
+    "back": "All projects",
+    "next": "Next project",
+    "prev": "Previous project",
+    "stack": "Stack",
+    "year": "Year",
+    "links": "Links",
+    "progress": "Reading progress"
+  },
+  "common": {
+    "close": "Close"
+  }
+}

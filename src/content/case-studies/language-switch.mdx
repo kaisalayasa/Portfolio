@@ -1,0 +1,59 @@
+export const meta = {
+  timeline: '2026',
+}
+
+## Problem
+
+There are a lot of excellent, carefully built decks for people learning Japanese. Core 2000 is a well-known example. The reverse doesn't really exist: there's far less equally well-structured material for people trying to learn English.
+
+Rather than build a new English-learning deck from scratch, it seemed simpler to take a deck that already works (good example sentences, good structure, years of community refinement) and reverse it. Flip which language is on the front, and generate real pronunciation audio for it. The quality of the original deck carries over, but now a much wider audience can actually use it.
+
+Anki's built-in answer is "just add a reverse card type". In practice that breaks on real decks. Fields are named differently in every deck, the back side usually carries readings, audio, and example sentences that give the answer away, and the card HTML is often hand-written with styling that assumes one direction.
+
+> A great deck shouldn't only work for one side of the language pair.
+
+## Users
+
+- **Japanese speakers learning English.** They get to study from the same polished decks that English speakers use to learn Japanese.
+- **Learners of any language pair** where the best decks only exist in one direction. Nothing about the approach is Japanese-specific.
+- **Learners who want to produce, not just recognize.** A reversed deck trains recall in the other direction.
+- **Teachers and deck creators** who want one deck to serve learners on both sides.
+
+## Constraints
+
+- **Runs locally.** Anki users care about owning their data, and many study offline. No API keys, no accounts, no cloud bills.
+- **Must never damage a collection.** People have years of review history in these decks.
+- **Arbitrary deck structure.** No assumptions about field names, order, or HTML.
+- **Lightweight.** Small local models and a simple install, so anyone can run it.
+
+## Key decisions and trade-offs
+
+<Tradeoff
+  chose="A local model (Qwen2.5-7B) to classify fields and languages"
+  over="Hard-coded rules for known decks, or a hosted API"
+  because="Rules only work for decks I've seen. An API means keys and cost for every learner. A small local model generalizes to unfamiliar decks and keeps everything on the user's machine."
+/>
+
+<Tradeoff
+  chose="Rebuilding the card template and card HTML"
+  over="Anki's built-in reverse card type"
+  because="The built-in reverse puts readings and audio on the new front, which gives the answer away. Rebuilding lets the new front show only the prompt and keeps readings on the answer side."
+/>
+
+<Tradeoff
+  chose="Piper TTS for generated audio"
+  over="Cloud text-to-speech"
+  because="Same principle: offline, free, private. A reversed deck needs pronunciation audio for its new front language, and Piper generates it locally."
+/>
+
+## What I built
+
+<Figure src="media/photos/language-switch-cover.jpg" alt="Language Switch settings and a rebuilt card" caption="The Deck Direction Converter: the AI reads the deck, proposes the new front and back, and previews the rebuilt card before anything changes." />
+
+The add-on works in three passes:
+
+1. **Detect.** It reads a sample of notes and figures out which fields hold the target language, which hold the meaning, and which are supporting material like readings, audio, and sentences.
+2. **Rebuild.** It generates a new template for the reversed direction, hides or edits fields that would leak the answer, and parses and regenerates the card HTML so styling survives.
+3. **Fill gaps.** The new front language usually has no audio in the original deck, so it generates pronunciation audio locally with Piper.
+
+It's open source on [GitHub](https://github.com/kaisalayasa/Language-Switch-Anki-Add-on).

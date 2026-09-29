@@ -1,0 +1,57 @@
+import type { L } from './types.ts'
+
+export const profile = {
+  name: 'Qais Alayasa',
+  nameJa: 'カイス',
+  nameAr: 'قيس',
+  /** *word* renders in italic accent serif */
+  headline: {
+    en: 'I build software where *engineering*, AI, and product meet.',
+    ja: '*エンジニアリング*とAIとプロダクトが交わる場所で、ソフトウェアをつくっています。',
+  } as L,
+  intro: {
+    en: 'Former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo in Minneapolis. I love creating real value for people through innovative solutions.',
+    ja: '東京のRecruit / IndeedでAIプロダクトマネージャーのインターン、ミネアポリスのAugeoでフルスタックのソフトウェアエンジニア インターンを経験。革新的なソリューションで、人々に本当の価値を届けることが好きです。',
+  } as L,
+  /** JSON-LD description */
+  bio: 'Qais Alayasa is a Computer Science student at Earlham College (2028) and product builder working across software engineering, product management, AI, and UX. Former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo in Minneapolis.',
+  email: 'kaisalayasa@gmail.com',
+  links: {
+    github: 'https://github.com/kaisalayasa',
+    linkedin: 'https://www.linkedin.com/in/qais-alayasa-204b121a2/',
+  },
+  /** Hero status line + footer clock and weather */
+  now: {
+    city: { en: 'Morioka, Iwate', ja: '岩手県盛岡市' } as L,
+    cityShort: { en: 'Morioka', ja: '盛岡' } as L,
+    flag: '🇯🇵',
+    timezone: 'Asia/Tokyo',
+    tzLabel: 'JST',
+    lat: 39.7,
+    lon: 141.15,
+    status: {
+      en: 'Teaching English & studying at Iwate University',
+      ja: '岩手大学で学びながら、中学校で英語を教えています',
+    } as L,
+  },
+  hero: {
+    portrait: 'media/photos/hero.jpg',
+    chips: ['React', 'AI', '日本語', 'PM', '400+ users'],
+  },
+  resume: {
+    pdf: 'resume/Qais_Alayasa_Resume.pdf',
+    preview: 'resume/resume-preview.png',
+    lastUpdated: '2026-09',
+  },
+  skills: {
+    strongest: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'SQL', 'Git/GitHub'],
+    also: ['HTML/CSS', 'Vite', 'Express', 'Django', 'Supabase', 'AWS', 'Okta', 'AWS Cognito', 'REST APIs', 'BeautifulSoup'],
+    ai: ['OpenAI API', 'Claude Code', 'Cursor', 'Local LLMs (Qwen2.5-7B)', 'Gemini API', 'OCR', 'TTS (Piper)'],
+  },
+  seo: {
+    title: 'Qais Alayasa — Software, AI & Product',
+    description:
+      'Qais Alayasa builds software where engineering, AI, and product meet. CS at Earlham College, former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo. Trilingual in Arabic, English, and Japanese.',
+    alumniOf: ['Earlham College', 'Iwate University'],
+  },
+}

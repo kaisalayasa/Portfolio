@@ -1,0 +1,226 @@
+{
+  "nav": {
+    "experience": "経歴",
+    "education": "学歴",
+    "projects": "プロジェクト",
+    "languages": "言語",
+    "life": "写真",
+    "music": "音楽",
+    "activities": "課外活動",
+    "contact": "連絡",
+    "resume": "履歴書",
+    "menu": "メニュー",
+    "close": "メニューを閉じる",
+    "skip": "本文へスキップ",
+    "palette": "検索・移動…",
+    "theme": "ダーク／ペーパーモードを切り替え",
+    "langLabel": "英語に切り替え",
+    "soundOn": "UIサウンドをオンにする",
+    "soundOff": "UIサウンドをオフにする",
+    "primary": "メインナビゲーション"
+  },
+  "hero": {
+    "status": "現在、{city}に滞在中",
+    "cta": "プロジェクトを見る",
+    "resume": "履歴書",
+    "scroll": "スクロール",
+    "portraitAlt": "カイス・アラヤサの写真"
+  },
+  "now": {
+    "time": "{city}の現在時刻",
+    "weather": "{city}の天気"
+  },
+  "process": {
+    "kicker": "つくり方",
+    "title": "毎回、この6ステップで。",
+    "s1": "不便を見つける",
+    "s1d": "自分や誰かが本当に困っていることから始めます。",
+    "s2": "課題を絞り込む",
+    "s2d": "本当に痛みを解決できているか確信できるまで、課題を絞り込みます。",
+    "s3": "すばやく試作する",
+    "s3d": "スライドより動くソフトウェア。数週間ではなく数時間で。",
+    "s4": "人に使ってもらう",
+    "s4d": "実際のユーザー、実際のデッキ、実際の教室で。言葉だけでなく、行動も見ます。",
+    "s5": "正直に学ぶ",
+    "s5d": "プライドより数字とフィードバック。失敗から学びます。",
+    "s6": "繰り返す",
+    "s6d": "そしてまた、少しずつ鋭くしていきます。"
+  },
+  "experience": {
+    "kicker": "経歴",
+    "title": "*働いて*きた場所。",
+    "now": "現在"
+  },
+  "education": {
+    "kicker": "学歴",
+    "title": "*学んで*いる場所。",
+    "gpa": "GPA",
+    "coursework": "履修科目",
+    "now": "現在"
+  },
+  "work": {
+    "kicker": "プロジェクト",
+    "title": "つくって、*届けて*きたもの。",
+    "intro": "プロダクト、ツール、そして実験。共通点は、本当の「不便」を見つけて、それをなくす一番シンプルなものをつくることです。",
+    "live": "公開中",
+    "code": "コード",
+    "case": "ケーススタディ",
+    "featured": "注目",
+    "stars": "スター {n}",
+    "demoFront": "表",
+    "demoBack": "裏",
+    "demoOriginal": "元のカード",
+    "demoRebuilt": "再構築後",
+    "demoCaption": "新しい向きに合わせて、テンプレート・フィールド・カードHTMLを再構築します。",
+    "playSite": "公開中のサイトで遊ぶ",
+    "inDev": "新しいプロダクトを*開発中*。",
+    "inDevSub": "新しいものを準備しています。GitHubで進捗をチェックしてください。",
+    "followGitHub": "GitHubでフォロー",
+    "more": "その他の仕事と制作",
+    "confidentialTag": "機密"
+  },
+  "journey": {
+    "kicker": "これまでの道のり",
+    "title": "パレスチナ → インディアナ → ミネソタ → 東京 → 盛岡",
+    "intro": "これまで暮らし、学び、働いてきた場所をめぐる、世界の旅。",
+    "hint": "ドラッグで回転・地点を選択",
+    "stops": "地点"
+  },
+  "languages": {
+    "kicker": "言語",
+    "title": "パレスチナに日本語学校はなかった。だから自分で*つくった*。",
+    "arcTitle": "机から、オフィス、そして教室へ",
+    "built": "そして、学習そのものを良くするためのソフトウェアをつくりました。",
+    "builtCta": "Language Switchを見る",
+    "builtTitle": "ここから生まれたもの",
+    "message": "近道はありません。毎日少しずつ、何年も。",
+    "selfStudy": "年間の独学",
+    "perDay": "語／日（最盛期の新出単語）",
+    "reviews": "枚／日の復習",
+    "senseiLabel": "カイス先生の判子",
+    "duoTitle": "Duolingo",
+    "ankiTitle": "Anki",
+    "cards": "枚",
+    "totalReviews": "累計の復習",
+    "decks": "デッキ",
+    "daily": "1日の復習",
+    "heatTitle": "1年間のAnki復習記録",
+    "heatTotal": "過去1年で{n}回の復習",
+    "less": "少",
+    "more": "多",
+    "kanjiTitle": "知っている漢字、すべて",
+    "kanjiZoom": "拡大ビューアーで開く",
+    "kanjiHint": "スクロール・ピンチで拡大、ドラッグで移動",
+    "senseiTitle": "カイス先生",
+    "kanjiUnit": "字の漢字を習得"
+  },
+  "life": {
+    "kicker": "写真",
+    "title": "まわりの*人たち*との写真。",
+    "photo": "写真",
+    "close": "閉じる",
+    "next": "次へ",
+    "prev": "前へ",
+    "open": "写真を開く：{caption}"
+  },
+  "music": {
+    "kicker": "音楽",
+    "title": "キーボードを離れて、*ステージ*へ。",
+    "featured": "注目のパフォーマンス",
+    "more": "その他のパフォーマンス",
+    "band": "好きなバンド",
+    "spotify": "{name}のSpotifyプレーヤー"
+  },
+  "activities": {
+    "kicker": "課外活動",
+    "title": "教室の*外*で。",
+    "intro": "リーダーシップ、コミュニティ、部活動。勉強や開発以外の時間にしていること。"
+  },
+  "recommendations": {
+    "kicker": "推薦",
+    "title": "一緒に働いた人たちの*声*。",
+    "more": "推薦文を全文読む",
+    "less": "閉じる",
+    "source": "LinkedInの推薦文を原文のまま掲載しています。"
+  },
+  "resume": {
+    "kicker": "履歴書",
+    "title": "1ページに*まとめる*と。",
+    "download": "PDFをダウンロード",
+    "open": "新しいタブで開く",
+    "updated": "最終更新：{date}",
+    "glance": "概要",
+    "leadership": "リーダーシップ・課外活動",
+    "education": "学歴",
+    "experience": "職歴",
+    "skills": "主なスキル",
+    "languages": "言語",
+    "preview": "履歴書のプレビュー",
+    "noPdf": "PDFは近日公開予定です。右の概要は常に最新です。"
+  },
+  "contact": {
+    "kicker": "連絡",
+    "title": "*人*が本当に使うものをつくっていますか？ぜひお話ししましょう。",
+    "email": "メールを送る",
+    "copy": "メールアドレスをコピー",
+    "copied": "コピーしました！"
+  },
+  "footer": {
+    "built": "React、Vite、そしてたくさんのAnkiでつくりました。",
+    "source": "ソースコードを見る",
+    "visitors": "訪問者 {n}人",
+    "top": "ページの先頭へ"
+  },
+  "palette": {
+    "placeholder": "コマンドを入力、または検索…",
+    "empty": "見つかりませんでした。「shiritori」と入力してみてください。",
+    "sections": "移動",
+    "projects": "プロジェクト",
+    "actions": "操作",
+    "theme": "テーマを切り替え",
+    "lang": "Switch to English",
+    "copyEmail": "メールアドレスをコピー",
+    "resume": "履歴書を開く",
+    "shiritori": "しりとりで遊ぶ",
+    "github": "GitHubを開く",
+    "linkedin": "LinkedInを開く",
+    "sound": "UIサウンドの切り替え"
+  },
+  "shiritori": {
+    "title": "ミニしりとり",
+    "rules": "私の言葉の最後の文字から始まる言葉を答えてください。「ん」で終わったら負けです。ひらがなでもローマ字でもOK。",
+    "placeholder": "例：りんご / ringo",
+    "inputLabel": "あなたの言葉",
+    "submit": "答える",
+    "yourTurn": "あなたの番です：「{kana}」から",
+    "score": "スコア {n}",
+    "best": "ベスト {n}",
+    "mustStart": "「{kana}」から始めてください",
+    "used": "「{word}」はもう使われました",
+    "tooShort": "2文字以上でお願いします",
+    "notKana": "ひらがな・カタカナ・ローマ字で入力してください",
+    "youN": "「{word}」は「ん」で終わるので、あなたの負けです！😅",
+    "iLose": "「{kana}」から始まる言葉が思いつきません。あなたの勝ちです！🎉",
+    "again": "もう一度",
+    "full": "フルバージョンで遊ぶ",
+    "close": "閉じる"
+  },
+  "notFound": {
+    "title": "迷子になりました",
+    "sub": "このページは見つかりませんでした。でも、しりとりならここにあります：",
+    "home": "ホームに戻る"
+  },
+  "case": {
+    "toc": "目次",
+    "back": "プロジェクト一覧",
+    "next": "次のプロジェクト",
+    "prev": "前のプロジェクト",
+    "stack": "技術",
+    "year": "年",
+    "links": "リンク",
+    "progress": "読了の進み具合"
+  },
+  "common": {
+    "close": "閉じる"
+  }
+}
