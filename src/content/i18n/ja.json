@@ -167,7 +167,7 @@
     "copied": "コピーしました！"
   },
   "footer": {
-    "built": "React、Vite、そしてたくさんのAnkiでつくりました。",
+    "built": "たくさんのAnkiでつくりました。",
     "source": "ソースコードを見る",
     "visitors": "訪問者 {n}人",
     "top": "ページの先頭へ"

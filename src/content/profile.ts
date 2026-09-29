@@ -10,8 +10,8 @@ export const profile = {
     ja: '人々の課題に、*革新的*な解決策を。',
   } as L,
   intro: {
-    en: 'Former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo in Minneapolis. I love creating real value for people through innovative solutions.',
-    ja: '東京のRecruit / IndeedでAIプロダクトマネージャーのインターン、ミネアポリスのAugeoでフルスタックのソフトウェアエンジニア インターンを経験。革新的なソリューションで、人々に本当の価値を届けることが好きです。',
+    en: 'Former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo in Minneapolis. Happiest when an idea goes from a sketch to something people actually use.',
+    ja: '東京のRecruit / IndeedでAIプロダクトマネージャーのインターン、ミネアポリスのAugeoでフルスタックのソフトウェアエンジニア インターンを経験。アイデアが、実際に使われるものになる瞬間が好きです。',
   } as L,
   /** JSON-LD description */
   bio: 'Qais Alayasa is a Computer Science student at Earlham College (2028) and product builder working across software engineering, product management, AI, and UX. Former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo in Minneapolis.',

@@ -10,7 +10,7 @@ export function consoleHello() {
     `%cQ%c\n\nHey, you're looking at the source! Say hi → %c${email}` +
       `%c\nソースを見てくれてありがとう！お気軽にどうぞ → %c${email}` +
       `%c\nمرحبًا، أنت تنظر إلى الكود! قل مرحبًا ← %c${email}` +
-      `%c\n\nBuilt with React, Vite & too much Anki. Try typing “shiritori” on the page.`,
+      `%c\n\nBuilt with too much Anki. Try typing “shiritori” on the page.`,
     seal,
     body,
     strong,
