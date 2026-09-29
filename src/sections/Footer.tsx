@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { profile } from '@/content/profile'
-import { GOATCOUNTER, REPO_URL } from '../../site.config.ts'
+import { GOATCOUNTER } from '../../site.config.ts'
 import { useI18n } from '@/lib/i18n'
 import { scrollToTop } from '@/lib/scroll'
 import { track } from '@/lib/analytics'
@@ -52,9 +52,6 @@ export function Footer() {
             aria-label="LinkedIn"
           >
             <IconLinkedIn />
-          </a>
-          <a href={REPO_URL} target="_blank" rel="noreferrer" className="link-draw mx-2 inline-flex min-h-11 items-center text-sm text-muted hover:text-ink">
-            {t('footer.source')}
           </a>
           <button type="button" onClick={scrollToTop} className="grid size-11 place-items-center rounded-full border border-line text-muted hover:border-line-strong hover:text-ink" aria-label={t('footer.top')}>
             <IconArrowUp />

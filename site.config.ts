@@ -12,5 +12,3 @@ export const BASE = CUSTOM_DOMAIN || isUserSite ? '/' : `/${REPO_NAME}/`
 export const SITE_URL = CUSTOM_DOMAIN
   ? `https://${CUSTOM_DOMAIN}`
   : `https://${GITHUB_USER}.github.io${BASE === '/' ? '' : BASE.replace(/\/$/, '')}`
-
-export const REPO_URL = `https://github.com/${GITHUB_USER}/${REPO_NAME}`
