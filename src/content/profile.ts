@@ -18,7 +18,7 @@ export const profile = {
   email: 'kaisalayasa@gmail.com',
   links: {
     github: 'https://github.com/kaisalayasa',
-    linkedin: 'https://www.linkedin.com/in/qais-alayasa-204b121a2/',
+    linkedin: 'https://www.linkedin.com/in/qais-alayasa/',
   },
   /** Hero status line + footer clock and weather */
   now: {
