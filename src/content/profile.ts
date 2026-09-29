@@ -6,8 +6,8 @@ export const profile = {
   nameAr: 'قيس',
   /** *word* renders in italic accent serif */
   headline: {
-    en: 'I build software where *engineering*, AI, and product meet.',
-    ja: '*エンジニアリング*とAIとプロダクトが交わる場所で、ソフトウェアをつくっています。',
+    en: 'Building *innovative* solutions to people’s problems.',
+    ja: '人々の課題に、*革新的*な解決策を。',
   } as L,
   intro: {
     en: 'Former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo in Minneapolis. I love creating real value for people through innovative solutions.',
@@ -51,7 +51,7 @@ export const profile = {
   seo: {
     title: 'Qais Alayasa — Software, AI & Product',
     description:
-      'Qais Alayasa builds software where engineering, AI, and product meet. CS at Earlham College, former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo. Trilingual in Arabic, English, and Japanese.',
+      'Qais Alayasa builds innovative solutions to people’s problems. CS at Earlham College, former AI Product Manager intern at Recruit / Indeed in Tokyo and full-stack software engineering intern at Augeo. Trilingual in Arabic, English, and Japanese.',
     alumniOf: ['Earlham College', 'Iwate University'],
   },
 }

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, m } from 'motion/react'
 import { profile } from '@/content/profile'
+import stars from '@/data/github-stars.json'
 import { useI18n } from '@/lib/i18n'
 import { asset, hasAsset } from '@/lib/media'
 import { scrollToId } from '@/lib/scroll'
@@ -10,6 +11,8 @@ import { btn } from '@/components/ui/Primitives'
 import { Magnetic } from '@/components/ui/Motion'
 import { Media } from '@/components/ui/Media'
 import { IconArrowRight, IconGitHub, IconLinkedIn } from '@/components/ui/Icons'
+
+const TOTAL_STARS = Object.values(stars as Record<string, number>).reduce((a, b) => a + b, 0)
 
 const GREETINGS = [
   { text: 'Hi, I’m Qais.', lang: 'en', dir: 'ltr' },
@@ -138,6 +141,20 @@ function Portrait() {
           {c}
         </span>
       ))}
+      {TOTAL_STARS > 0 && (
+        <a
+          href={profile.links.github}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => track('project_link', { label: 'hero_stars' })}
+          className="float-chip glass absolute top-[60%] -right-9 hidden items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-xs shadow-lg md:inline-flex"
+          style={{ ['--dur' as string]: '7.5s', ['--delay' as string]: '-2.1s' }}
+          aria-label={t('hero.stars', { n: TOTAL_STARS })}
+        >
+          <IconGitHub size={14} />
+          {TOTAL_STARS}
+        </a>
+      )}
     </div>
   )
 }

@@ -14,9 +14,11 @@ const headline = typeof profile.headline === 'string' ? profile.headline : profi
 const fonts = await loadFonts({ jpChars: 'カイス先生' })
 
 // "*word*" → italic accent; punctuation right after it stays attached.
+// One flex item per word, so a wrapped line never starts with a space.
 const words = headline
   .replace(/\*([^*]+)\*([,.;:!?]*)/g, '*$1$2*')
   .split(/(\*[^*]+\*)/g)
+  .flatMap((seg) => (seg.startsWith('*') ? [seg] : seg.split(/\s+/)))
   .filter(Boolean)
 
 const tree = h(
@@ -46,11 +48,9 @@ const tree = h(
     ),
     h(
       'div',
-      { style: { display: 'flex', flexWrap: 'wrap', fontFamily: 'Instrument Serif', fontSize: 76, lineHeight: 1.02, letterSpacing: -1.5 } },
+      { style: { display: 'flex', flexWrap: 'wrap', columnGap: 18, fontFamily: 'Instrument Serif', fontSize: 76, lineHeight: 1.02, letterSpacing: -1.5 } },
       ...words.map((w) =>
-        w.startsWith('*')
-          ? h('span', { style: { fontStyle: 'italic', color: '#4FD1C5', marginRight: 0 } }, w.slice(1, -1))
-          : h('span', { style: { whiteSpace: 'pre-wrap' } }, w),
+        w.startsWith('*') ? h('span', { style: { fontStyle: 'italic', color: '#4FD1C5' } }, w.slice(1, -1)) : h('span', {}, w),
       ),
     ),
     h(

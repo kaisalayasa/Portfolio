@@ -24,7 +24,8 @@
     "cta": "プロジェクトを見る",
     "resume": "履歴書",
     "scroll": "スクロール",
-    "portraitAlt": "カイス・アラヤサの写真"
+    "portraitAlt": "カイス・アラヤサの写真",
+    "stars": "GitHubのスター{n}個"
   },
   "now": {
     "time": "{city}の現在時刻",

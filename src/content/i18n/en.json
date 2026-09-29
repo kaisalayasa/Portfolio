@@ -24,7 +24,8 @@
     "cta": "See my projects",
     "resume": "Résumé",
     "scroll": "Scroll",
-    "portraitAlt": "Portrait of Qais Alayasa"
+    "portraitAlt": "Portrait of Qais Alayasa",
+    "stars": "{n} stars on GitHub"
   },
   "now": {
     "time": "Local time in {city}",

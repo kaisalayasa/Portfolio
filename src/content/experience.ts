@@ -5,7 +5,7 @@ export const experience: Experience[] = [
     id: 'recruit',
     org: { en: 'Recruit Holdings / Indeed', ja: 'リクルートホールディングス / Indeed' },
     role: { en: 'AI Product Manager Intern', ja: 'AIプロダクトマネージャー インターン' },
-    dates: { en: 'Jun – Jul 2026', ja: '2026年6月〜7月' },
+    dates: { en: 'Jun – Aug 2026', ja: '2026年6月〜8月' },
     location: { en: 'Tokyo, Japan', ja: '東京' },
     logo: 'media/logos/recruit.png',
     photo: { src: 'media/japan/tokyo-recruit.jpg', alt: { en: 'At Recruit in Tokyo', ja: '東京のリクルートにて' } },
