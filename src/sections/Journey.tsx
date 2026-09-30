@@ -25,7 +25,7 @@ export default function Journey() {
   const reduced = useReducedMotion()
   const canGlobe = useMemo(webgl, [])
   const useGlobe = desktop && !reduced && canGlobe
-  const [active, setActive] = useState(journey.at(-1)!.id)
+  const [active, setActive] = useState('tokyo')
   const [rotateTo, setRotateTo] = useState({ id: active, n: 0 })
   const stop = journey.find((s) => s.id === active)!
 

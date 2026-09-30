@@ -208,63 +208,26 @@ function InDevelopment() {
   )
 }
 
-/** Short horizontal card for work projects ('wide', with a context photo) and small builds ('mention'). */
-function WideCard({ p }: { p: Project }) {
+/** Short card for the small builds in "More work". */
+function MentionCard({ p }: { p: Project }) {
   const { t, r } = useI18n()
-  const wide = p.variant === 'wide'
-  const photo = wide ? p.photo : undefined
   return (
     <RevealItem as="li" className="min-w-0">
-      <article className="card spotlight flex h-full flex-col overflow-hidden sm:flex-row">
-        {photo && (
-          <Media
-            src={photo.src}
-            alt={r(photo.alt)}
-            aspect="auto"
-            focus={photo.focus}
-            className="h-52 shrink-0 sm:h-auto sm:w-48 lg:w-56"
-            sizes="(min-width: 640px) 220px, 100vw"
-          />
+      <article className="card spotlight flex h-full flex-col overflow-hidden p-5">
+        <p className="kicker min-w-0">{r(p.kicker)}</p>
+        <h3 className="mt-2 font-display text-2xl leading-none tracking-tight">{r(p.title)}</h3>
+        <Txt v={p.summary} as="p" className="mt-2.5 text-sm leading-relaxed text-muted" />
+        {p.links.code && (
+          <a
+            href={p.links.code}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => track('project_link', { slug: p.slug, label: 'code' })}
+            className="mt-auto inline-flex min-h-11 items-center gap-1.5 self-start pt-2 text-sm text-accent"
+          >
+            <IconGitHub size={14} /> <span className="link-draw">{t('work.code')}</span> <IconArrowUpRight size={13} />
+          </a>
         )}
-        <div className={cn('flex min-w-0 flex-1 flex-col', wide ? 'p-5 md:p-6' : 'p-5')}>
-          <div className="flex flex-wrap items-center gap-2">
-            <p className="kicker min-w-0">{r(p.kicker)}</p>
-            {p.confidential && (
-              <span className="inline-flex items-center gap-1 rounded-full border border-accent/40 bg-accent-soft px-2 py-0.5 font-mono text-[0.62rem] tracking-wider text-accent uppercase">
-                <span aria-hidden>🔒</span> {t('work.confidentialTag')}
-              </span>
-            )}
-          </div>
-          <h3 className={cn('mt-2 font-display leading-none tracking-tight', wide ? 'text-3xl' : 'text-2xl')}>{r(p.title)}</h3>
-          <Txt v={p.summary} as="p" className={cn('mt-2.5 leading-relaxed text-muted', wide ? 'text-[0.93rem]' : 'text-sm')} />
-          {p.result && (
-            <p className="mt-3 border-l-2 border-accent pl-3 text-[0.9rem] font-medium">
-              <Txt v={p.result} />
-            </p>
-          )}
-          {wide ? (
-            <>
-              <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-4">
-                {p.tags.map((tag) => (
-                  <Tag key={tag}>{tag}</Tag>
-                ))}
-              </div>
-              <CardLinks p={p} className="pt-3" />
-            </>
-          ) : (
-            p.links.code && (
-              <a
-                href={p.links.code}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => track('project_link', { slug: p.slug, label: 'code' })}
-                className="mt-auto inline-flex min-h-11 items-center gap-1.5 self-start pt-2 text-sm text-accent"
-              >
-                <IconGitHub size={14} /> <span className="link-draw">{t('work.code')}</span> <IconArrowUpRight size={13} />
-              </a>
-            )
-          )}
-        </div>
       </article>
     </RevealItem>
   )
@@ -273,7 +236,7 @@ function WideCard({ p }: { p: Project }) {
 export default function Projects() {
   const { t } = useI18n()
   const main = projects.filter((p) => !p.variant || p.variant === 'card')
-  const more = projects.filter((p) => p.variant === 'wide' || p.variant === 'mention')
+  const more = projects.filter((p) => p.variant === 'mention')
 
   return (
     <Section id="projects" jp="作品" kicker={t('work.kicker')} title={<Emph text={t('work.title')} />} intro={t('work.intro')}>
@@ -289,7 +252,7 @@ export default function Projects() {
       </p>
       <Reveal as="ul" className="grid grid-cols-1 gap-4 lg:grid-cols-2" amount={0.05}>
         {more.map((p) => (
-          <WideCard key={p.slug} p={p} />
+          <MentionCard key={p.slug} p={p} />
         ))}
       </Reveal>
     </Section>

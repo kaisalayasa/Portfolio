@@ -70,7 +70,7 @@ describe('content', () => {
       favoriteBand.image,
       languages.duolingoCard.src,
       languages.kanji.image,
-      ...projects.flatMap((p) => [p.cover?.src, p.photo?.src]),
+      ...projects.map((p) => p.cover?.src),
       ...experience.flatMap((e) => [e.logo, e.photo?.src]),
       ...education.map((e) => e.logo),
       ...journey.map((j) => j.photo?.src),

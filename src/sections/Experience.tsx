@@ -51,7 +51,7 @@ function Entry({ e }: { e: Exp }) {
               </li>
             ))}
           </ul>
-          {e.photo && <Media src={e.photo.src} alt={r(e.photo.alt)} aspect="4/3" className="rounded-xl" sizes="220px" />}
+          {e.photo && <Media src={e.photo.src} alt={r(e.photo.alt)} aspect="4/3" focus={e.photo.focus} className="rounded-xl" sizes="220px" />}
         </div>
 
         <div className="mt-5 flex flex-wrap items-center gap-1.5">

@@ -80,36 +80,6 @@ export const projects: Project[] = [
 
   // More work
   {
-    slug: 'recruit-indeed',
-    variant: 'wide',
-    title: { en: 'AI Hiring Product', ja: 'AI採用プロダクト' },
-    kicker: { en: 'Recruit / Indeed · AI PM Internship · Tokyo', ja: 'リクルート / Indeed・AIプロダクトマネージャー インターン・東京' },
-    summary: {
-      en: 'Owned a product that streamlines hiring with ATS systems, from initial idea to final prototype.',
-      ja: 'ATSで採用を効率化するプロダクトを、最初のアイデアから最終プロトタイプまで担当しました。',
-    },
-    tags: ['Product', 'React', 'OpenAI', 'Claude Code', 'Google Maps API'],
-    year: '2026',
-    photo: { src: 'media/photos/recruit_project_section.jpg', alt: { en: 'With my team at Recruit in Tokyo', ja: '東京のリクルートでチームと' }, focus: '33% 40%' },
-    links: {},
-    confidential: true,
-  },
-  {
-    slug: 'john-deere-ocr',
-    variant: 'wide',
-    title: { en: 'Claude OCR Pipeline', ja: 'Claude OCRパイプライン' },
-    kicker: { en: 'Augeo · Client project for John Deere', ja: 'Augeo・John Deere向けクライアント案件' },
-    summary: {
-      en: 'Replaced a slow, error-prone document-reading step with a Claude-powered OCR workflow.',
-      ja: '時間がかかりミスも多かった書類読み取り工程を、ClaudeによるOCRワークフローに置き換えました。',
-    },
-    result: { en: '~6× accuracy · ~80% faster', ja: '精度 約6倍・処理時間 約80%短縮' },
-    tags: ['Claude', 'OCR', 'Python', 'Cursor'],
-    photo: { src: 'media/photos/augeo_office.jpg', alt: { en: 'The Augeo office', ja: 'Augeoのオフィス' } },
-    links: {},
-    confidential: true,
-  },
-  {
     slug: 'bus-time',
     variant: 'mention',
     title: 'Bus-Time',

@@ -125,7 +125,7 @@ export default function CaseStudy({ slug }: { slug: string }) {
                     {t('work.live')} <IconArrowUpRight size={14} />
                   </a>
                 )}
-                {!code && !live && <span className="text-muted">{p.confidential ? '🔒' : '—'}</span>}
+                {!code && !live && <span className="text-muted">—</span>}
               </dd>
             </div>
           </dl>

@@ -25,11 +25,8 @@ export interface Project {
   caseStudy?: boolean
   /** 'owner/repo', for the star count */
   repo?: string
-  confidential?: boolean
-  /** 'card' (default) = main grid; 'wide' / 'mention' = the "More work" list */
-  variant?: 'card' | 'wide' | 'mention'
-  /** Context photo (team, office) for 'wide' cards */
-  photo?: MediaRef
+  /** 'card' (default) = main grid; 'mention' = the small "More work" list */
+  variant?: 'card' | 'mention'
 }
 
 export interface Experience {

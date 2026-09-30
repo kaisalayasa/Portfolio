@@ -3,8 +3,8 @@ import type { L, MediaRef } from './types.ts'
 export const journey: { id: string; place: L; lat: number; lon: number; when: L; text: L; photo?: MediaRef }[] = [
   {
     id: 'palestine',
-    place: { en: 'Palestine', ja: 'パレスチナ' },
-    lat: 31.9,
+    place: { en: 'Bethlehem, Palestine', ja: 'パレスチナ・ベツレヘム' },
+    lat: 31.7,
     lon: 35.2,
     when: { en: 'Where it started', ja: 'はじまりの場所' },
     text: {
@@ -39,15 +39,15 @@ export const journey: { id: string; place: L; lat: number; lon: number; when: L;
   },
   {
     id: 'tokyo',
-    place: { en: 'Tokyo', ja: '東京' },
-    lat: 35.68,
-    lon: 139.69,
+    place: { en: 'Chiyoda, Tokyo', ja: '東京都千代田区' },
+    lat: 35.69,
+    lon: 139.75,
     when: { en: 'Summer 2026', ja: '2026年夏' },
     text: {
       en: 'As an AI Product Manager intern at Recruit / Indeed, I owned an AI product from idea to prototype and pitched it in Japanese.',
       ja: 'リクルート / IndeedのAIプロダクトマネージャー インターンとして、AIプロダクトをアイデアからプロトタイプまで担当し、日本語でピッチしました。',
     },
-    photo: { src: 'media/japan/tokyo-recruit.jpg', alt: { en: 'Presenting at Recruit in Tokyo', ja: '東京のリクルートで発表' }, focus: '50% 12%' },
+    photo: { src: 'media/photos/recruit_project_section.jpg', alt: { en: 'With my team at Recruit in Tokyo', ja: '東京のリクルートでチームと' }, focus: '50% 25%' },
   },
   {
     id: 'morioka',
