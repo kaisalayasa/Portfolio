@@ -39,8 +39,8 @@ export const education: Education[] = [
         title: { en: 'English Teacher', ja: '英語教師' },
         org: { en: 'Kuroishino Middle School (黒石野中学校)', ja: '盛岡市立 黒石野中学校' },
         description: {
-          en: 'Teaching English through Iwate University. My students call me “Qais-sensei”, and a few asked for me as their homeroom teacher.',
-          ja: '岩手大学を通じて英語を教えています。生徒からは「カイス先生」と呼ばれ、担任になってほしいと言ってくれた生徒もいました。',
+          en: 'Teaching English through Iwate University. My students call me “Qais-sensei”, and I’m part of the school’s table tennis club.',
+          ja: '岩手大学を通じて英語を教えています。生徒からは「カイス先生」と呼ばれ、放課後は卓球部の活動にも参加しています。',
         },
       },
     ],

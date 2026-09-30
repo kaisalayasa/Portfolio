@@ -37,7 +37,7 @@ export default function Journey() {
   return (
     <Section id="journey" jp="旅路" kicker={t('journey.kicker')} title={t('journey.title')} intro={t('journey.intro')}>
       <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
-        <div className="relative">
+        <div className="relative hidden lg:block">
           {useGlobe ? (
             <Suspense fallback={<div className="aspect-square w-full animate-pulse rounded-full bg-elevated/50" />}>
               <div className="relative mx-auto max-w-[580px]">

@@ -39,8 +39,10 @@ export const profile = {
     chips: ['React', 'AI', '日本語', 'PM', '400+ users'],
   },
   resume: {
+    /** The PM résumé: the default in the Résumé section, and what the hero, contact and ⌘K buttons open. */
     pdf: 'resume/Qais_Alayasa_Resume.pdf',
     preview: 'resume/resume-preview.png',
+    swe: { pdf: 'resume/Qais_Alayasa_SWE_Resume.pdf', preview: 'resume/resume-preview-swe.png' },
     lastUpdated: '2026-09',
   },
   skills: {

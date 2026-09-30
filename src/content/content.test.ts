@@ -63,6 +63,10 @@ describe('content', () => {
   it('every media file the content points at exists in /public', () => {
     const paths = [
       profile.hero.portrait,
+      profile.resume.pdf,
+      profile.resume.preview,
+      profile.resume.swe.pdf,
+      profile.resume.swe.preview,
       favoriteBand.image,
       languages.duolingoCard.src,
       languages.kanji.image,

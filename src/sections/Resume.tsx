@@ -1,54 +1,71 @@
+import { useState } from 'react'
 import { profile } from '@/content/profile'
 import { experience } from '@/content/experience'
 import { education } from '@/content/education'
 import { activities } from '@/content/activities'
 import { languages } from '@/content/languages'
 import { useI18n } from '@/lib/i18n'
-import { asset, hasAsset } from '@/lib/media'
+import { asset } from '@/lib/media'
+import { cn } from '@/lib/cn'
 import { track } from '@/lib/analytics'
 import { formatMonth } from '@/lib/time'
 import { Emph, Section, Tag, btn } from '@/components/ui/Primitives'
 import { Reveal, RevealItem } from '@/components/ui/Motion'
 import { Media } from '@/components/ui/Media'
-import { IconDownload, IconFile } from '@/components/ui/Icons'
+import { IconDownload } from '@/components/ui/Icons'
 
-function Preview() {
+type Variant = 'pm' | 'swe'
+
+/** Both previews are mounted and cross-fade, so switching is instant and the second image is already loaded. */
+function Preview({ active }: { active: Variant }) {
   const { t } = useI18n()
-  const { pdf, preview } = profile.resume
-  const hasPdf = hasAsset(pdf)
-  const inner = hasAsset(preview) ? (
-    <Media src={preview} alt={t('resume.preview')} aspect="8.5/11" imgClassName="object-top" sizes="(min-width: 1024px) 520px, 100vw" />
-  ) : hasPdf ? (
-    <object data={`${asset(pdf)}#view=FitH&toolbar=0`} type="application/pdf" aria-label={t('resume.preview')} className="h-full w-full">
-      <div className="grid h-full place-items-center p-8 text-center">
-        <a href={asset(pdf)} className={btn('primary')} target="_blank" rel="noreferrer">
-          <IconFile size={16} /> {t('resume.open')}
-        </a>
-      </div>
-    </object>
-  ) : (
-    <div className="grid h-full place-items-center p-10 text-center text-[#5d6470]">
-      <div>
-        <IconFile size={40} className="mx-auto mb-4 text-[#0b6b64]" />
-        <p>{t('resume.noPdf')}</p>
-      </div>
-    </div>
-  )
+  const { pdf, swe } = profile.resume
+  const items: { id: Variant; pdf: string; preview: string }[] = [
+    { id: 'pm', pdf, preview: profile.resume.preview },
+    { id: 'swe', ...swe },
+  ]
+  const current = items.find((i) => i.id === active)!
   return (
     <div className="relative mx-auto w-full max-w-[520px] pr-4 pb-4">
       <div aria-hidden className="absolute inset-0 top-4 left-4 rotate-2 rounded-lg border border-line bg-surface" />
       <a
-        href={hasPdf ? asset(pdf) : undefined}
+        href={asset(current.pdf)}
         target="_blank"
         rel="noreferrer"
-        onClick={() => hasPdf && track('resume_download', { from: 'preview' })}
-        className="relative block aspect-[8.5/11] overflow-hidden rounded-lg border border-line bg-white shadow-2xl transition-transform duration-500 hover:-translate-y-1"
-        data-cursor={hasPdf ? 'view' : undefined}
+        onClick={() => track('resume_download', { from: 'preview', id: active })}
+        className="relative grid aspect-[8.5/11] overflow-hidden rounded-lg border border-line bg-white shadow-2xl transition-transform duration-500 hover:-translate-y-1"
+        data-cursor="view"
         aria-label={t('resume.preview')}
-        tabIndex={hasPdf ? 0 : -1}
       >
-        {inner}
+        {items.map((i) => (
+          <div key={i.id} aria-hidden={i.id !== active} className={cn('col-start-1 row-start-1 transition-opacity duration-300', i.id === active ? 'opacity-100' : 'opacity-0')}>
+            <Media src={i.preview} alt={i.id === active ? t('resume.preview') : ''} aspect="8.5/11" imgClassName="object-top" sizes="(min-width: 1024px) 520px, 100vw" />
+          </div>
+        ))}
       </a>
+    </div>
+  )
+}
+
+function Switch({ active, onChange }: { active: Variant; onChange: (v: Variant) => void }) {
+  const { t } = useI18n()
+  const options: { id: Variant; label: string }[] = [
+    { id: 'pm', label: t('resume.pm') },
+    { id: 'swe', label: t('resume.swe') },
+  ]
+  return (
+    <div role="group" aria-label={t('resume.choose')} className="inline-flex rounded-full border border-line p-1">
+      {options.map((o) => (
+        <button
+          key={o.id}
+          type="button"
+          aria-pressed={active === o.id}
+          onClick={() => onChange(o.id)}
+          className={cn('h-10 rounded-full px-5 text-sm font-medium transition-colors', active === o.id ? 'bg-accent text-on-accent' : 'text-muted hover:text-ink')}
+        >
+          {o.label}
+        </button>
+      ))}
     </div>
   )
 }
@@ -161,8 +178,9 @@ function PrintResume() {
 
 export default function Resume() {
   const { t, lang } = useI18n()
-  const { pdf, lastUpdated } = profile.resume
-  const hasPdf = hasAsset(pdf)
+  const [active, setActive] = useState<Variant>('pm')
+  const { lastUpdated } = profile.resume
+  const pdf = active === 'pm' ? profile.resume.pdf : profile.resume.swe.pdf
 
   return (
     <Section id="resume" jp="履歴書" kicker={t('resume.kicker')} title={<Emph text={t('resume.title')} />} className="print-keep">
@@ -170,16 +188,17 @@ export default function Resume() {
       <Reveal className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr]" stagger={0.1}>
         <RevealItem className="order-2 lg:order-1">
           <div data-print="hide">
-            <Preview />
+            <Preview active={active} />
           </div>
         </RevealItem>
         <RevealItem className="order-1 space-y-5 lg:order-2">
+          <div data-print="hide">
+            <Switch active={active} onChange={setActive} />
+          </div>
           <div className="flex flex-wrap items-center gap-3" data-print="hide">
-            {hasPdf && (
-              <a href={asset(pdf)} download onClick={() => track('resume_download', { from: 'button' })} className={btn('primary', 'h-12 px-6')}>
-                <IconDownload size={17} /> {t('resume.download')}
-              </a>
-            )}
+            <a href={asset(pdf)} download onClick={() => track('resume_download', { from: 'button', id: active })} className={btn('primary', 'h-12 px-6')}>
+              <IconDownload size={17} /> {t('resume.download')}
+            </a>
             <span className="font-mono text-xs text-muted">{t('resume.updated', { date: formatMonth(lastUpdated, lang) })}</span>
           </div>
           <div data-print="hide">

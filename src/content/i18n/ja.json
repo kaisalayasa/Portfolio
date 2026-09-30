@@ -148,7 +148,6 @@
     "kicker": "履歴書",
     "title": "1ページに*まとめる*と。",
     "download": "PDFをダウンロード",
-    "open": "新しいタブで開く",
     "updated": "最終更新：{date}",
     "glance": "概要",
     "leadership": "リーダーシップ・課外活動",
@@ -157,7 +156,9 @@
     "skills": "主なスキル",
     "languages": "言語",
     "preview": "履歴書のプレビュー",
-    "noPdf": "PDFは近日公開予定です。右の概要は常に最新です。"
+    "pm": "PM版",
+    "swe": "SWE版",
+    "choose": "履歴書の種類を選ぶ"
   },
   "contact": {
     "kicker": "連絡",

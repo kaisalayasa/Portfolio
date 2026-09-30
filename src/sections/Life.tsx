@@ -16,11 +16,11 @@ function Tile({ item, onOpen }: { item: LifeItem; onOpen: () => void }) {
   const touch = useIsTouch()
   const video = item.kind === 'video'
   return (
-    <RevealItem as="li" className="mb-3 break-inside-avoid md:mb-4">
+    <RevealItem as="li" className="aspect-[4/3] w-[80%] shrink-0 snap-center md:mb-4 md:aspect-auto md:w-auto md:break-inside-avoid">
       <button
         type="button"
         onClick={onOpen}
-        className="group relative block w-full overflow-hidden rounded-[18px] border border-line text-left"
+        className="group relative block h-full w-full overflow-hidden rounded-[18px] border border-line text-left md:h-auto"
         aria-label={t('life.open', { caption: t('life.photo') })}
         data-cursor={video ? 'play' : 'view'}
       >
@@ -31,13 +31,13 @@ function Tile({ item, onOpen }: { item: LifeItem; onOpen: () => void }) {
             loop
             playsInline
             preload="metadata"
-            className="block aspect-[3/4] w-full object-cover"
+            className="block h-full w-full object-cover md:aspect-[3/4] md:h-auto"
             onPointerEnter={(e) => !touch && e.currentTarget.play().catch(() => {})}
             onPointerLeave={(e) => e.currentTarget.pause()}
             aria-hidden
           />
         ) : (
-          <Media src={item.src} alt={t('life.photo')} sizes="(min-width: 768px) 33vw, 50vw" imgClassName="transition-transform duration-700 group-hover:scale-[1.04]" />
+          <Media src={item.src} alt={t('life.photo')} className="h-full md:h-auto" sizes="(min-width: 768px) 33vw, 80vw" imgClassName="transition-transform duration-700 group-hover:scale-[1.04]" />
         )}
         {video && (
           <span className="absolute top-3 right-3 grid size-9 place-items-center rounded-full bg-black/55 text-white backdrop-blur">
@@ -56,7 +56,7 @@ export default function Life() {
 
   return (
     <Section id="life" jp="写真" kicker={t('life.kicker')} title={<Emph text={t('life.title')} />}>
-      <Reveal as="ul" className="columns-2 gap-3 md:columns-3 md:gap-4" stagger={0.05} amount={0.05}>
+      <Reveal as="ul" className="no-scrollbar -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:block md:columns-3 md:gap-4 md:overflow-visible md:px-0 md:pb-0" stagger={0.05} amount={0.05}>
         {items.map((item, i) => (
           <Tile key={item.src} item={item} onOpen={() => setOpen(i)} />
         ))}

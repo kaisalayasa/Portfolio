@@ -148,7 +148,6 @@
     "kicker": "Résumé",
     "title": "The one-page *version*.",
     "download": "Download PDF",
-    "open": "Open in new tab",
     "updated": "Last updated {date}",
     "glance": "At a glance",
     "leadership": "Leadership & activities",
@@ -157,7 +156,9 @@
     "skills": "Top skills",
     "languages": "Languages",
     "preview": "Résumé preview",
-    "noPdf": "PDF coming soon. The summary on the right is always current."
+    "pm": "PM résumé",
+    "swe": "SWE résumé",
+    "choose": "Choose a résumé version"
   },
   "contact": {
     "kicker": "Contact",
